@@ -83,6 +83,14 @@ class Window(QMainWindow):
 		b_size.addAction(pix_12)
 		pix_12.triggered.connect(self.Pixel_12)
 
+		pix_30 = QAction("30px", self)
+		b_size.addAction(pix_30)
+		pix_30.triggered.connect(self.Pixel_30)
+
+		pix_60 = QAction("60px", self)
+		b_size.addAction(pix_60)
+		pix_60.triggered.connect(self.Pixel_60)
+
 		# creating options for brush color
 		# creating action for black color
 		black = QAction("Black", self)
@@ -107,6 +115,10 @@ class Window(QMainWindow):
 		red = QAction("Red", self)
 		b_color.addAction(red)
 		red.triggered.connect(self.redColor)
+
+		cyan = QAction("Cyan", self)
+		b_color.addAction(cyan)
+		cyan.triggered.connect(self.cyanColor)
 
 
 	# method for checking mouse cicks
@@ -185,6 +197,11 @@ class Window(QMainWindow):
 	def Pixel_12(self):
 		self.brushSize = 12
 
+	def Pixel_30(self):
+		self.brushSize = 30
+	def Pixel_60(self):
+		self.brushSize= 60
+
 	# methods for changing brush color
 	def blackColor(self):
 		self.brushColor = Qt.black
@@ -200,6 +217,8 @@ class Window(QMainWindow):
 
 	def redColor(self):
 		self.brushColor = Qt.red
+	def cyanColor (self):
+		self.brushColor = Qt.cyan
 
 
 
