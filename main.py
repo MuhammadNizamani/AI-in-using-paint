@@ -13,7 +13,7 @@ class Window(QMainWindow):
 		self.setWindowTitle("Paint with PyQt5")
 
 		# setting geometry to main window
-		self.setGeometry(100, 100, 800, 600)
+		self.setGeometry(100, 200, 800, 600)
 
 		# creating image object
 		self.image = QImage(self.size(), QImage.Format_RGB32)
